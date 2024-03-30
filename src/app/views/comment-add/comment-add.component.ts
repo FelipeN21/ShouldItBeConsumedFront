@@ -134,7 +134,7 @@ export class CommentAddComponent implements OnInit{
       toSend.token = this.token
       toSend.textoComentario = aux
 
-      this.http.post<any>('https://localhost:7131/api/Comentario/AdicionarComentario', toSend)
+      this.http.post<any>('https://shoulditbeconsumed20240330142139.azurewebsites.net/api/Comentario/AdicionarComentario', toSend)
       .subscribe(data => {
       if(data.erros == null){
       this.toastr.success("Comentario adicionado", "Sucesso")

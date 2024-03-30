@@ -92,7 +92,7 @@ searchQueryBase(nome: string)
     aux.Query = nome
     if(true){
 
-      this.http.post<any>('https://localhost:7131/api/PerfilInstagram/ListarPerfis', aux)
+      this.http.post<any>('https://shoulditbeconsumed20240330142139.azurewebsites.net/api/PerfilInstagram/ListarPerfis', aux)
       .subscribe(data => {
        if(data.erros == null){
 

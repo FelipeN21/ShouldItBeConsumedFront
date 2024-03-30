@@ -55,7 +55,6 @@ export class ComentariosComponent implements OnInit{
       else
       this.valido = false
       
-      console.log(this.valido)
     }
     catch{
       ;
@@ -88,7 +87,7 @@ getComentarios()
       var prof = sessionStorage.getItem("LAST_PROFILE")
       if(prof != null && prof != "" && prof != undefined){
         aux.IdPerfil = Number(prof)
-      this.http.post<any>('https://localhost:7131/api/Comentario/ListarComentariosPerfil', aux)
+      this.http.post<any>('https://shoulditbeconsumed20240330142139.azurewebsites.net/api/Comentario/ListarComentariosPerfil', aux)
       .subscribe(data => {
        if(data.erros == null){
 
@@ -131,7 +130,7 @@ getPerfil()
       var prof = sessionStorage.getItem("LAST_PROFILE")
       if(prof != null && prof != "" && prof != undefined){
         aux.IdPerfil = Number(prof)
-      this.http.post<any>('https://localhost:7131/api/PerfilInstagram/ObterPerfil', aux)
+      this.http.post<any>('https://shoulditbeconsumed20240330142139.azurewebsites.net/api/PerfilInstagram/ObterPerfil', aux)
       .subscribe(data => {
        if(data.erros == null){
 
@@ -142,7 +141,6 @@ getPerfil()
         //this.IdadeRecomendada = data.dados.idadeRecomendada
         this.Linkperfil = data.dados.linkPerfil
         this.isLoading = false
-        console.log(this.PCA + "aa")
      }
      else
      {
@@ -175,7 +173,7 @@ apagarComentario(idComentario: number, idUsuario: number){
       aux.Token = token != null ? token : ""
 
 
-      this.http.post<any>('https://localhost:7131/api/Comentario/ApagarComentario', aux)
+      this.http.post<any>('https://shoulditbeconsumed20240330142139.azurewebsites.net/api/Comentario/ApagarComentario', aux)
       .subscribe(data => {
        if(data.erros == null){
         window.location.reload();

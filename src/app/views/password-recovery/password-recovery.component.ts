@@ -64,7 +64,7 @@ submitPwd()
       this.toastr.warning("Por favor verifique as senhas digitadas", "Senhas não coincidem")
     else
     {
-      this.http.post<any>('https://localhost:7131/api/Usuario/TrocarSenha', aux)
+      this.http.post<any>('https://shoulditbeconsumed20240330142139.azurewebsites.net/api/Usuario/TrocarSenha', aux)
       .subscribe(data => {
         if(data.erros == null){
         this.toastr.success("Senha alterada com sucesso", "Sucesso")

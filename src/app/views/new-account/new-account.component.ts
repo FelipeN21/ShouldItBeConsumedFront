@@ -51,7 +51,7 @@ export class NewAccountComponent implements OnInit{
       this.toastr.warning("Por favor verifique as senhas digitadas", "Senhas não coincidem")
     else
     {
-      this.http.post<any>('https://localhost:7131/api/Usuario/AdicionarUsuarios', aux)
+      this.http.post<any>('https://shoulditbeconsumed20240330142139.azurewebsites.net/api/Usuario/AdicionarUsuarios', aux)
       .subscribe(data => {
         if(data.erros == null){
         this.toastr.success("Conta criado com sucesso, realize o acesso pela tela de login", "Sucesso")

@@ -37,7 +37,7 @@ private sendInfo: any;
    aux.Email = this.loginForm.value.email
    aux.Senha = this.loginForm.value.senha
 
-   this.http.post<any>('https://localhost:7131/api/Usuario/Login', aux)
+   this.http.post<any>('https://shoulditbeconsumed20240330142139.azurewebsites.net/api/Usuario/Login', aux)
    .subscribe(data => {
 
     if(data.erros == null){
@@ -71,7 +71,7 @@ private sendInfo: any;
     this.toastr.warning("Preencha o campo de email e clique novamente", "Campo nulo")
     else
     {
-      this.http.post<any>('https://localhost:7131/api/Usuario/RecuperarSenha', aux)
+      this.http.post<any>('https://shoulditbeconsumed20240330142139.azurewebsites.net/api/Usuario/RecuperarSenha', aux)
    .subscribe(data => {
     if(data.erros == null){
     this.toastr.success("Foi enviada uma correspondência para seu email", "Verifique seu email")
