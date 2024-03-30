@@ -1,0 +1,21 @@
+.text-white{
+    text-decoration: white;
+}
+
+.body-style{
+    background-color: rgb(233, 230, 230);
+    min-height: 100vh;
+}
+
+.font-custom{
+    font-family: cursive;
+}
+
+.password-recovery{
+    font-size: small;
+}
+
+.footnote-font{
+    font-size: medium;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}

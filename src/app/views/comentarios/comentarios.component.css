@@ -1,0 +1,121 @@
+.text-white{
+    text-decoration: white;
+}
+
+.body-style{
+    background-color: rgb(233, 230, 230);
+    min-height: 100vh;
+}
+
+.font-custom{
+    font-family: cursive;
+}
+
+.password-recovery{
+    font-size: small;
+}
+
+.footnote-font{
+    font-size: medium;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo com transparência */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Z-index alto para ficar acima de todo o conteúdo */
+  }
+
+  .linha-horizontal {
+    border: none;
+    height: 10px;
+    background-color: darkgreen;
+    margin: 20px 0;
+}
+
+.font-profile{
+    font-weight: 500;
+    font-size: large;
+}
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  /* Conteúdo do modal */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+  }
+  
+  /* Botão para fechar o modal */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  .fixed-height-image {
+    max-height: 200px; /* Defina a altura desejada */
+}
+
+.botao-redondo {
+  display: inline-block;
+  width: 25px; /* Ajuste o tamanho conforme necessário */
+  height: 25px; /* Ajuste o tamanho conforme necessário */
+  border-radius: 50%; /* Garante que o botão seja redondo */
+  background-color: lightgrey; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto */
+  text-align: center; /* Centraliza o texto verticalmente */
+  line-height: 25px; /* Centraliza o texto verticalmente */
+  font-size: 18px; /* Tamanho do texto */
+  border: none; /* Remove a borda */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+.botao-redondo-close {
+  display: inline-block;
+  width: 25px; /* Ajuste o tamanho conforme necessário */
+  height: 25px; /* Ajuste o tamanho conforme necessário */
+  border-radius: 50%; /* Garante que o botão seja redondo */
+  background-color: darkgrey; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto */
+  text-align: center; /* Centraliza o texto verticalmente */
+  line-height: 1px; /* Centraliza o texto verticalmente */
+  font-size: 20px; /* Tamanho do texto */
+  border: none; /* Remove a borda */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}

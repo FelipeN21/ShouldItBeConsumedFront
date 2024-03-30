@@ -1,0 +1,85 @@
+<body class="body-style">
+
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <!-- Título -->
+        <span class="navbar-brand mb-0 h1 font-custom"><a href="/" style=" text-decoration: none; color: inherit;">Should It Be Consumed</a></span>
+    </div>
+</nav>
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card" style="background-color: #000; border: 1px solid #fff;min-height: 35vh; max-width: 150vw;">
+                <div class="card-body">
+
+                    <h5 class="card-title text-center text-white font-custom">Crie sua conta</h5>
+
+                    <form class="mt-5" [formGroup]="cadastroForm">
+                        <div class="container mt-5">
+
+                            <div class="row justify-content-center">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email" class="text-white font-custom">Nome*:</label>
+                                        <input type="name" [formControlName]="'nome'" class="form-control" id="email" placeholder="Seu nome" maxlength="50">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="senha" class="text-white font-custom">Email*:</label>
+                                        <input type="email" [formControlName]="'email'" class="form-control" id="senha" placeholder="Seu email" maxlength="100">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 mt-4">
+                                    <div class="form-group">
+                                        <label for="cpf" class="text-white font-custom">CPF*:</label>
+                                        <input type="cpf" [formControlName]="'cpf'" class="form-control" id="cpf" placeholder="Seu CPF *SEM PONTOS*" maxlength="11" mask="'000.000.000.00'">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mt-4">
+                                    <div class="form-group">
+                                        <label for="telefone" class="text-white font-custom">Telefone:</label>
+                                        <input type="telefone" [formControlName]="'telefone'" class="form-control" id="telefone" placeholder="Seu telefone" maxlength="11">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 mt-4">
+                                    <div class="form-group">
+                                        <label for="senha" class="text-white font-custom">Senha*:</label>
+                                        <input type="password" [formControlName]="'senha'" class="form-control" id="senha" placeholder="Sua senha" maxlength="100">
+                                    </div>
+                                </div>
+                                
+                                <!-- Confirme a Senha na mesma linha que a Senha -->
+                                <div class="col-md-6 mt-4">
+                                    <div class="form-group">
+                                        <label for="confirmarSenha" class="text-white font-custom">Confirmar Senha*:</label>
+                                        <input type="password" [formControlName]="'confirmarSenha'" class="form-control" id="confirmarSenha" placeholder="Confirme sua senha">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row text-center mt-5">
+                            <div class="col-md-12">
+                                <button type="button" (click)="submitAcc()" class="btn btn-block font-custom"
+                                    style="color:  white; background-color: darkgreen; min-width: 50%;">Criar conta</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>

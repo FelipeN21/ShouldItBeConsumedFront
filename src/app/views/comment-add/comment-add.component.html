@@ -1,0 +1,85 @@
+<body class="body-style">
+
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <!-- Título -->
+            <span class="navbar-brand mb-0 h1 font-custom"><a href="/comment" style=" text-decoration: none; color: inherit;">Should It Be Consumed</a></span>
+        </div>
+    </nav>
+    
+    
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card" style="background-color: #000; border: 1px solid #fff;min-height: 35vh; max-width: 150vw; border-radius: 2%;">
+                    <div class="card-body">
+    
+                        <h5 class="card-title text-center text-white font-custom">Adicione um comentário</h5>
+    
+                        <form class="mt-5" [formGroup]="comentarioForm">
+                            <div class="container mt-5">
+    
+                                <div class="row justify-content-center">
+    
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="email" class="text-white font-custom">Nome influenciador:</label>
+                                            <input type="name" [formControlName]="'nomePerfil'" class="form-control" id="email" placeholder="Seu email" style="border-color: gray; background-color: lightgrey; font-weight: bold;" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="senha" class="text-white font-custom">Nota*:</label>
+                                            <select [(ngModel)]="nota"  [ngModelOptions]="{standalone: true}" class="form-select">
+                                                <option *ngFor="let item of listaNota" [value]="item.valor">{{ item.valor }}</option>
+                                              </select>
+                                        </div>
+                                    </div>
+    
+                                    <div class="col-md-6 mt-4">
+                                        <div class="form-group">
+                                            <label for="cpf" class="text-white font-custom">Idade Recomendada*:</label>
+                                            <select [(ngModel)]="idadeRecomendada"  [ngModelOptions]="{standalone: true}" class="form-select">
+                                                <option *ngFor="let item of listaIdade" [value]="item.valor">{{ item.valor }}</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mt-4">
+                                        <div class="form-group">
+                                            <label for="telefone" class="text-white font-custom">Ví anúncios na página*:</label>
+                                            <select [(ngModel)]="pca"  [ngModelOptions]="{standalone: true}" class="form-select">
+                                                <option *ngFor="let item of listaItens" [value]="item.valor">{{ item.texto }}</option>
+                                              </select>
+                                        </div>
+                                    </div>
+    
+                                    <div class="col-md-12 mt-4">
+                                        <div class="form-group">
+                                            <label for="senha" class="text-white font-custom">Comentário*:</label>
+                                            <textarea class="form-control" [formControlName]="'comentario'" rows="3" placeholder="Seu Comentario" maxlength=300></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Confirme a Senha na mesma linha que a Senha -->
+    
+                                </div>
+                            </div>
+    
+                            <div class="row text-center mt-5">
+                                <div class="col-md-12">
+                                    <button type="button" class="btn btn-block font-custom"
+                                        style="color:  white; background-color: darkgreen; min-width: 50%;" (click)="sendComment()">Adicionar Comentário</button>
+                                </div>
+                            </div>
+                        </form>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    </body>
